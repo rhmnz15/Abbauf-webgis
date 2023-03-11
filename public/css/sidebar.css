@@ -1,0 +1,104 @@
+/* ======== START ::: toggle show on desktop ======== */
+.custom-left-header {
+    padding-left: 5rem !important;
+}
+.custom-left-sidebar {
+    left: -20rem !important;
+    transition: all 0.5s;
+}
+.custom-left-body {
+    margin-left: 5rem !important;
+}
+.hamburger-desktop {
+    display: none;
+}
+@media only screen and (min-width: 991px) {
+    .hamburger-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ======== END ::: toggle show on desktop ======== */
+
+.head-name {
+    padding-top: 20px;
+    /* background-color: #f6f7fc !important; */
+    border-bottom: none !important;
+    /* padding-top: 2.875rem !important;
+    padding-bottom: 2.875rem !important; */
+}
+.avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #f6f7fc;
+}
+.avatar {
+    height: 65px;
+    width: 65px;
+    padding: 3px;
+    border-radius: 100%;
+    margin-right: 1rem;
+    background: conic-gradient(#4461f2, 220deg, #f6f7fc 0deg);
+}
+
+.detail {
+    width: 145px;
+}
+@media only screen and (min-width: 780px) {
+    .avatar {
+        height: 65px;
+        width: 65px;
+        padding: 3px;
+    }
+}
+.circle-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    border: 3px solid #4461f2;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+}
+.user_avatar .detail .name {
+    font-size: 16px;
+    margin: 0 !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1;
+}
+.user_avatar .detail .type {
+    font-size: 10px;
+    margin: 0 !important;
+    line-height: 1;
+    opacity: 0.3;
+}
+@media only screen and (min-width: 780px) {
+    .user_avatar .detail .name {
+        font-size: 20px;
+    }
+    .user_avatar .detail .type {
+        font-size: 14px;
+    }
+}
+
+#management-user li {
+    margin-bottom: 2rem;
+}
+.nav-sidebar div {
+    margin-right: 0.5rem;
+    padding: 0.875rem;
+    border-radius: 100%;
+    background-color: white;
+}
+.nav-sidebar span {
+    opacity: 0.5;
+}
+
+.menu-icon{
+    box-shadow: -10px 13px 25px #e4e3e3;
+}

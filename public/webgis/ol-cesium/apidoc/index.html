@@ -1,0 +1,215 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ol-cesium</title>
+	<meta name="description" content="Documentation for ol-cesium">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">ol-cesium</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>ol-cesium</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p>OpenLayers - Cesium integration library. Create your map using <a href="https://openlayers.org/">OpenLayers</a>, and visualize it on a globe with <a href="https://cesiumjs.org">Cesium</a>.
+				See <a href="https://openlayers.org/ol-cesium/examples/">live examples</a>.</p>
+				<a href="#es6-modules" id="es6-modules" style="color: inherit; text-decoration: none;">
+					<h2>ES6 modules</h2>
+				</a>
+				<p>Since version 2.0, the code is entirely based on ES6 modules and syntax.
+					It requires OpenLayers 6.x.
+				A convenient ES6 package <code>olcs</code> is available on npm.</p>
+				<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+					<h2>Features</h2>
+				</a>
+				<p>Switch smoothly between 2D and 3D and synchronize:</p>
+				<ul>
+					<li>Map context (bounding box and zoom level);</li>
+					<li>Raster data sources;</li>
+					<li>Vector data sources in 2D and 3D;</li>
+					<li>Map selection (selected items);</li>
+					<li>Animated transitions between map and globe view.</li>
+				</ul>
+				<p>The library is configurable and extensible and allows:</p>
+				<ul>
+					<li>Lazy or eager loading of Cesium</li>
+					<li>Limiting Cesium resource consumption (idle detection)</li>
+				</ul>
+				<p>For synchronization of maps in projections other than EPSG:4326 and EPSG:3857 you need 2 datasets, see the customProj example.</p>
+				<a href="#integration-in-your-application" id="integration-in-your-application" style="color: inherit; text-decoration: none;">
+					<h2>Integration in your application</h2>
+				</a>
+				<p>There are several ways to integrate OL-Cesium in your application.
+				In all cases OpenLayers and Cesium are peer-dependencies of OL-Cesium, your application need to depend on a compatible version of OpenLayers and of Cesium. Note that Cesium is accessed through the global <code>window.Cesium</code> object. OpenLayers is accessed through ES6 imports.</p>
+				<a href="#as-an-es6-library-recommended-method" id="as-an-es6-library-recommended-method" style="color: inherit; text-decoration: none;">
+					<h3>As an ES6 library (recommended method)</h3>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">npm i --save olcs</span>
+</code></pre>
+				<p>Then import the parts you need. Example:</p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">OLCesium</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;olcs/OLCesium.js&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">ol3d</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">OLCesium</span><span style="color: #000000">({</span><span style="color: #001080">map:</span><span style="color: #000000"> </span><span style="color: #001080">ol2dMap</span><span style="color: #000000">}); </span><span style="color: #008000">// ol2dMap is the ol.Map instance</span>
+<span style="color: #001080">ol3d</span><span style="color: #000000">.</span><span style="color: #795E26">setEnabled</span><span style="color: #000000">(</span><span style="color: #0000FF">true</span><span style="color: #000000">);</span>
+</code></pre>
+				<p>In addition, you need to expose the Cesium library as <code>window.Cesium</code>.
+				For this, simply add the Cesium script to your html:</p>
+				<pre><code class="language-html"><span style="color: #800000">&lt;script</span><span style="color: #000000FF"> </span><span style="color: #FF0000">type</span><span style="color: #000000FF">=</span><span style="color: #0000FF">&quot;text/javascript&quot;</span><span style="color: #000000FF"> </span><span style="color: #FF0000">src</span><span style="color: #000000FF">=</span><span style="color: #0000FF">&quot;..your_path../Cesium.js&quot;</span><span style="color: #800000">&gt;&lt;/script&gt;</span>
+</code></pre>
+				<p>For Cesium integration with Webpack, see <a href="https://github.com/gberaudo/ol-cesium-webpack-example">ol-cesium-webpack-example</a>.</p>
+				<a href="#as-an-old-fashioned-independent-library-need-update" id="as-an-old-fashioned-independent-library-need-update" style="color: inherit; text-decoration: none;">
+					<h3>As an old-fashioned independent library (need update)</h3>
+				</a>
+				<ul>
+					<li><p>build the library in dist/olcs.js:</p>
+						<pre><code class="language-bash"><span style="color: #000000">npm i --save olcs</span>
+<span style="color: #000000">npm run build-library</span>
+</code></pre>
+					</li>
+					<li><p>get the CSS and JS from the full build at <a href="https://openlayers.org/download/">https://openlayers.org/download/</a></p>
+					</li>
+					<li><p>use as follow:</p>
+						<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">ol3d</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">olcs</span><span style="color: #000000">.</span><span style="color: #795E26">OLCesium</span><span style="color: #000000">({</span><span style="color: #001080">map:</span><span style="color: #000000"> </span><span style="color: #001080">ol2dMap</span><span style="color: #000000">}); </span><span style="color: #008000">// ol2dMap is the ol.Map instance</span>
+<span style="color: #001080">ol3d</span><span style="color: #000000">.</span><span style="color: #795E26">setEnabled</span><span style="color: #000000">(</span><span style="color: #0000FF">true</span><span style="color: #000000">);</span>
+</code></pre>
+					</li>
+				</ul>
+				<p>For the remaining steps, see the <a href="https://openlayers.org/ol-cesium/examples/oldfashioned.html">old fashioned example</a>.
+				Notably, you need the Cesium library.</p>
+				<a href="#as-an-umd-library-angular-" id="as-an-umd-library-angular-" style="color: inherit; text-decoration: none;">
+					<h3>As an UMD library (Angular, ...)</h3>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">npm i --save ol-cesium</span>
+</code></pre>
+				<p>The UMD-specific build is located here: <code>node_modules/ol-cesium/dist/olcesium.umd.js</code></p>
+				<p>Then import the parts you need. Example:</p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">OLCesium</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;ol-cesium&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">ol3d</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">OLCesium</span><span style="color: #000000">({</span><span style="color: #001080">map:</span><span style="color: #000000"> </span><span style="color: #001080">ol2dMap</span><span style="color: #000000">}); </span><span style="color: #008000">// ol2dMap is the ol.Map instance</span>
+<span style="color: #001080">ol3d</span><span style="color: #000000">.</span><span style="color: #795E26">setEnabled</span><span style="color: #000000">(</span><span style="color: #0000FF">true</span><span style="color: #000000">);</span>
+</code></pre>
+				<p>In addition, you need to expose the Cesium library as <code>window.Cesium</code>.
+				For this, simply add the Cesium script to your html:</p>
+				<pre><code class="language-html"><span style="color: #800000">&lt;script</span><span style="color: #000000FF"> </span><span style="color: #FF0000">type</span><span style="color: #000000FF">=</span><span style="color: #0000FF">&quot;text/javascript&quot;</span><span style="color: #000000FF"> </span><span style="color: #FF0000">src</span><span style="color: #000000FF">=</span><span style="color: #0000FF">&quot;..your_path../Cesium.js&quot;</span><span style="color: #800000">&gt;&lt;/script&gt;</span>
+</code></pre>
+				<a href="#going-further" id="going-further" style="color: inherit; text-decoration: none;">
+					<h2>Going further</h2>
+				</a>
+				<p>See the <a href="https://openlayers.org/ol-cesium/examples/">examples</a>.</p>
+				<p>If you are new to Cesium, you should also check the <a href="https://cesiumjs.org/tutorials">Cesium tutorials</a>.</p>
+				<a href="#running-the-examples-in-debug-mode" id="running-the-examples-in-debug-mode" style="color: inherit; text-decoration: none;">
+					<h2>Running the examples in debug mode</h2>
+				</a>
+				<p>This is useful for contributing to Ol-Cesium, because it loads the
+				source files instead of a minified build:</p>
+				<pre><code><span style="color: #001080">$</span><span style="color: #000000"> </span><span style="color: #001080">make</span><span style="color: #000000"> </span><span style="color: #001080">serve</span>
+</code></pre>
+				<p>will make the distribution examples available at <a href="http://localhost:3000/examples">http://localhost:3000/examples</a></p>
+				<a href="#running-the-unminified-version-of-cesium" id="running-the-unminified-version-of-cesium" style="color: inherit; text-decoration: none;">
+					<h2>Running the unminified version of Cesium</h2>
+				</a>
+				<p>Passing the parameter <code>?mode=dev</code> to an example will load the debug version of
+					Cesium instead of the minified one. This is helpful when something breaks inside
+					Cesium. In distribution mode, an unminified version of OpenLayers and Ol-Cesium is
+				also loaded.</p>
+				<a href="#limitations" id="limitations" style="color: inherit; text-decoration: none;">
+					<h2>Limitations</h2>
+				</a>
+				<ul>
+					<li><p>OpenLayers unmanaged layers are not discoverable and as a consequence not
+							supported. Plain layers should be used instead of the synchronization managed
+						manually. See <a href="https://github.com/openlayers/ol-cesium/issues/350">https://github.com/openlayers/ol-cesium/issues/350</a>.</p>
+					</li>
+					<li><p>OpenLayers interactions are not supported in 3d. See <a href="https://github.com/openlayers/ol-cesium/issues/655">https://github.com/openlayers/ol-cesium/issues/655</a>.</p>
+					</li>
+				</ul>
+				<a href="#release-process" id="release-process" style="color: inherit; text-decoration: none;">
+					<h2>Release process</h2>
+				</a>
+				<p>See <a href="https://github.com/openlayers/ol-cesium/blob/master/RELEASE.md">RELEASE.md</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/default.html" class="tsd-kind-icon">default</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

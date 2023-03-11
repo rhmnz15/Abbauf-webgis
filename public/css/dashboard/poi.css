@@ -1,0 +1,97 @@
+
+/* card poi */
+.small-card-poi{
+    width: auto;
+    height: 140px;
+
+    /* cards bg */
+
+    background: #FEFEFF;
+    box-shadow: 0px 109.322px 87.4576px rgba(41, 72, 152, 0.05), 0px 70.8569px 51.2194px rgba(41, 72, 152, 0.037963), 0px 42.1092px 27.8569px rgba(41, 72, 152, 0.0303704), 0px 21.8644px 14.2119px rgba(41, 72, 152, 0.025), 0px 8.90772px 7.12618px rgba(41, 72, 152, 0.0196296), 0px 2.02448px 3.44162px rgba(41, 72, 152, 0.012037);
+    border-radius: 10.9322px;
+}
+
+.table-card-poi{
+    box-sizing: border-box;
+    margin-top: 25px;
+    width: auto;
+    height: auto;
+    position: relative;
+
+
+    /* cards bg */
+
+    background: #FEFEFF;
+    box-shadow: 0px 109.322px 87.4576px rgba(41, 72, 152, 0.05), 0px 70.8569px 51.2194px rgba(41, 72, 152, 0.037963), 0px 42.1092px 27.8569px rgba(41, 72, 152, 0.0303704), 0px 21.8644px 14.2119px rgba(41, 72, 152, 0.025), 0px 8.90772px 7.12618px rgba(41, 72, 152, 0.0196296), 0px 2.02448px 3.44162px rgba(41, 72, 152, 0.012037);
+    border-radius: 10.9322px;
+}
+
+
+.list-name-poi{
+    flex-grow: 1;
+}
+
+.add-poi{
+cursor: pointer;
+padding-right: 32px;
+padding-bottom: -10px;
+
+}
+
+
+/* side card poi */
+.small-card-poi .row{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+
+/* side card Poi */
+.small-card-poi p{
+    font-size: 12px;
+    margin-right: 15px;
+}
+
+
+/* Apply styles starting from medium devices and up to extra large devices */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    /* side card POI */
+    .small-card-poi .row{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .small-card-poi img{
+    width: 45px;
+    height: 45px;
+    }
+
+    .small-card-poi h6{
+        font-size: 14px;
+    }
+
+    .small-card-poi h2{
+        font-size: 25px;
+        padding-bottom: 3px;
+    }
+
+    .small-card-poi .userText{
+        font-size: 12px;
+        padding-bottom: 3px;
+    }
+
+    .small-card-poi p{
+        font-size: 10px;
+        margin-right: 7px;
+    }
+}
+
+@media (min-width: 1400px){
+
+    /* side card poi */
+    .small-card-poi p{
+        font-size: 12px;
+        margin-right: 15px;
+    }
+    /* End Of Side Card CSS Config*/
+}

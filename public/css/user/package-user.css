@@ -1,0 +1,131 @@
+.card-package-user{
+    top: 50px !important;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.card-package{
+    background-color: white;
+    padding: 5px;
+}
+
+.rounded-10{
+    border-radius: 19px;
+}
+
+.card-package-user{
+    top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.logo-abbauf{
+    margin-bottom: 10px;
+}
+
+#title-price{
+    font-size: 25px;
+}
+
+#price{
+    margin-top: -10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#price-desc{
+    font-size: 24px;
+}
+
+#button-sub{
+    background-color: #4461F2; 
+    font-size:15px;
+}
+
+/* Small Device */
+@media (max-width: 768px) {
+    .card-package-user{
+        top: 25px !important;
+    }
+
+    #price-desc{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+ }
+
+
+/* medium weight */
+@media (min-width: 768px) {
+
+    .card-package-user{
+        top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .logo-abbauf{
+        margin-bottom: 10px;
+    }
+
+    #title-price{
+        font-size: 25px;
+    }
+
+    #price{
+        margin-top: -10px;
+        font-weight: 300;
+    }
+
+    #price-desc{
+        font-size: 16px;
+    }
+
+    .w-package{
+        max-width: 450px;
+        box-sizing: border-box;
+    }
+
+    #price-desc{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+}
+
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .card-package-user{
+        top: 30px !important;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .logo-abbauf{
+        width: 60px;
+        margin-bottom: 6px;
+
+    }
+
+    #title-price{
+        font-size: 20px;
+    }
+
+    #price{
+        margin-top: -10px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    #price-desc{
+        font-size: 14px;
+    }
+
+
+
+    .w-package{
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,47 @@
+/* ======== START ::: OR CONTINUE REGISTER WITH STYLE ======== */
+.continue-register {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.continue-register span {
+    font-size: 0.75rem;
+}
+@media only screen and (min-width: 640px) {
+    .continue-register {
+        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+    .continue-register span {
+        font-size: 0.875rem;
+    }
+}
+/* ======== END ::: OR CONTINUE REGISTER WITH STYLE ======== */
+
+/* ======== START ::: THIRD PARTIES BUTTONS STYLE ======== */
+.third-party-button {
+    padding: 0.75rem 3rem;
+    background: #f6f6f6;
+    border-radius: 10px;
+    border: 1px solid #dddfdd;
+    transition: background-color 0.2s ease;
+}
+.third-party-button:hover {
+    background: #e6e1e1;
+}
+.third-party-button:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5) !important;
+    outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+}
+@media only screen and (min-width: 640px) {
+    .third-party-button {
+        padding: 1rem 4rem;
+    }
+}
+/* ======== END ::: THIRD PARTIES BUTTONS STYLE ======== */
+
+@media only screen and (min-width: 640px) {
+    #register-form {
+        margin-top: 4rem;
+    }
+}

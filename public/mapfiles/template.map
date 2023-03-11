@@ -1,0 +1,42 @@
+LAYER
+    METADATA
+        "DESCRIPTION" "$name"
+        "wms_title" "$name"
+        "wms_enable_request" "*"
+        "ows_name" "$name"
+        "ows_srs" "EPSG:4326"
+        "gml_include_items" "all"
+        "gml_featureid" "gid"
+        "ows_enable_request" "*"
+    END
+
+    TEMPLATE "temp/$name.html"
+
+    PROJECTION
+        "init=epsg:4326"
+    END
+
+    NAME "$name"
+    CONNECTIONTYPE postgis
+    CONNECTION "user=$username dbname=$dbname host=$hostname port=$port password=$password"
+    DATA "geom FROM $tableName using unique gid using srid=4326"
+    TYPE $type
+    STATUS ON
+
+    CLASS
+        NAME "$name"
+        STYLE
+            COLOR "#DF2E2E"
+            OUTLINECOLOR 0 0 0
+            LINECAP BUTT
+            TRANSPARENCY 50
+            WIDTH 2
+            PATTERN
+                1 4
+            END
+        END
+    END
+
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+
+END

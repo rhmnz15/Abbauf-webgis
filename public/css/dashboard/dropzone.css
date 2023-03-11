@@ -1,0 +1,30 @@
+
+#drop_zone {
+   background-color: #ffffff;
+   border: #0000006c 1px dashed;
+   width: 100%;
+   padding : 15px 0;
+   border-radius: 10px;
+}
+#drop_zone p {
+   font-size: 14px;
+   margin: 0;
+   line-height: 23px;
+   text-align: center;
+}
+#btn_upload, #selectfile {
+   display: none;
+}
+
+#btn_file_pick{
+    padding: 4px;
+}
+
+#btn_upload{
+        padding: 4px;
+}
+
+#file_info{
+    font-size: 12px;
+    padding: 2px;
+}

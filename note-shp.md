@@ -1,0 +1,1 @@
+[Install ogr2ogr / GDAL](https://www.gisinternals.com/query.html?content=filelist&file=release-1930-x64-gdal-3-5-2-mapserver-8-0-0.zip)

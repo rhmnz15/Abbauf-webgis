@@ -1,0 +1,119 @@
+/* ======== START ::: BANNER STYLE ======== */
+.banner h1 {
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 4.875rem;
+}
+.banner p {
+    color: black;
+    font-size: 1.25rem;
+}
+.banner img {
+    display: none;
+    height: 25rem;
+}
+@media only screen and (min-width: 1200px) {
+    .banner img {
+        display: block;
+        margin-bottom: 2.5rem;
+    }
+}
+/* ======== END ::: BANNER STYLE ======== */
+
+/* ======== START ::: AUTHBOX LOGIN ======== */
+.auth-box-login {
+    width: 100%;
+    max-width: 555px;
+    background: #fefeff;
+    box-shadow: 0px 109.322px 87.4576px rgba(41, 72, 152, 0.05),
+        0px 70.8569px 51.2194px rgba(41, 72, 152, 0.037963),
+        0px 42.1092px 27.8569px rgba(41, 72, 152, 0.0303704),
+        0px 21.8644px 14.2119px rgba(41, 72, 152, 0.025),
+        0px 8.90772px 7.12618px rgba(41, 72, 152, 0.0196296),
+        0px 2.02448px 3.44162px rgba(41, 72, 152, 0.012037);
+    border-radius: 10.9322px;
+    padding: 2rem 1.5rem;
+    z-index: 10;
+}
+.auth-box-login .logo-abbauf {
+    height: 3.2rem;
+    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 640px) {
+    .auth-box-login .logo-abbauf {
+        height: auto;
+    }
+    .auth-box-login {
+        padding: 2.375rem 3.25rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* .auth-box-login .logo-abbauf {
+        margin-bottom: 3.875rem;
+    } */
+    .auth-box-login {
+        padding: 2.375rem 3.5rem;
+    }
+}
+/* ======== END ::: AUTHBOX LOGIN ======== */
+
+/* ======== START ::: OR CONTINUE REGISTER WITH STYLE ======== */
+.continue-register {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.continue-register span {
+    font-size: 0.75rem;
+}
+@media only screen and (min-width: 64px) {
+    .continue-register {
+        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+    .continue-register span {
+        font-size: 0.875rem;
+    }
+}
+/* ======== END ::: OR CONTINUE REGISTER WITH STYLE ======== */
+
+/* ======== START ::: THIRD PARTIES BUTTONS STYLE ======== */
+.third-party-button {
+    padding: 0.75rem 3rem;
+    background: #f6f6f6;
+    border-radius: 10px;
+    border: 1px solid #dddfdd;
+    transition: background-color 0.2s ease;
+}
+.third-party-button:hover {
+    background: #e6e1e1;
+}
+.third-party-button:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5) !important;
+    outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+}
+@media only screen and (min-width: 640px) {
+    .third-party-button {
+        padding: 1rem 4rem;
+    }
+}
+/* ======== END ::: THIRD PARTIES BUTTONS STYLE ======== */
+
+/* ======== START ::: CIRCLE STYLE ======== */
+/* circle yellow and blue  */
+.circle-yellow-login {
+    width: 900px;
+    height: 900px;
+    top: -20%;
+    left: 0;
+    transform: translate(-40%, 0);
+}
+.circle-blue-login {
+    width: 900px;
+    height: 900px;
+    top: 50%;
+    left: 0;
+    transform: translate(-20%, -50%);
+}
+/* ======== END ::: CIRCLE STYLE ======== */

@@ -1,0 +1,14 @@
+array(1) { 
+    ["products"]=> array(2) 
+    { 
+    [0]=> array(2) { ["bulan"]=> string(1) "9" ["jumlah"]=> string(1) "1" } 
+    [1]=> array(2) { ["bulan"]=> string(2) "10" ["jumlah"]=> string(1) "1" } 
+    } }
+
+    array(2) { [0]=> object(stdClass)#68 (2) 
+    { ["count"]=> string(1) "1" ["bulan"]=> string(1) "9" } 
+    
+    [1]=> object(stdClass)#69 (2) 
+    { ["count"]=> string(1) "1" ["bulan"]=> string(2) "10" }
+    
+    }

@@ -1,0 +1,182 @@
+/* ======== START ::: DEFAULT TAG STYLE ======== */
+a {
+    text-decoration: none;
+}
+/* ======== END ::: DEFAULT TAG STYLE ======== */
+
+/* ======== START ::: FONT FAMILY ======== */
+.font-nunito {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+.font-abeezee {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+}
+/* ======== END ::: FONT FAMILY ======== */
+
+/* ======== START ::: CUSTOM CONTAINER ======== */
+.layout-auth {
+    width: 90%;
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ======== END ::: CUSTOM CONTAINER ======== */
+
+/* ======== START ::: WHITE AUTH BOX STYLE ======== */
+.auth-box {
+    width: 100%;
+    max-width: 550px;
+    background: #fefeff;
+    box-shadow: 0px 109.322px 87.4576px rgba(41, 72, 152, 0.05),
+        0px 70.8569px 51.2194px rgba(41, 72, 152, 0.037963),
+        0px 42.1092px 27.8569px rgba(41, 72, 152, 0.0303704),
+        0px 21.8644px 14.2119px rgba(41, 72, 152, 0.025),
+        0px 8.90772px 7.12618px rgba(41, 72, 152, 0.0196296),
+        0px 2.02448px 3.44162px rgba(41, 72, 152, 0.012037);
+    border-radius: 10.9322px;
+    padding: 2rem 1.5rem;
+    z-index: 10;
+}
+.auth-box h1 {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+}
+@media only screen and (min-width: 640px) {
+    .auth-box {
+        /* padding: 6.375rem 7.25rem; */
+        /* padding: 3.375rem 5.25rem; */
+        padding: 2.5rem 3rem;
+    }
+    .auth-box h1 {
+        margin-bottom: 3.5rem;
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .auth-box h1 {
+        margin-bottom: 3.875rem;
+        font-size: 2.5rem;
+    }
+}
+/* ======== END ::: WHITE AUTH BOX STYLE ======== */
+
+/* ======== START ::: INPUT STYLE ======== */
+.input-container {
+    margin-bottom: 1.25rem;
+}
+.auth-input {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #4f555a;
+    background: #eaf0f7;
+    border: 2px solid #eaf0f7;
+    border-radius: 10px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 2.2rem;
+}
+.auth-input:focus {
+    outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+    border-color: #4461f2 !important;
+}
+@media only screen and (min-width: 640px) {
+    .auth-input {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* .auth-input {
+        font-size: 1.125rem;
+    } */
+}
+/* ======== END ::: INPUT STYLE ======== */
+
+/* ======== START ::: AUTH BUTTON STYLE ======== */
+.auth-button {
+    padding: 0.75rem 1rem;
+    background: #4461f2;
+    box-shadow: 0px 12px 21px 4px rgba(68, 97, 242, 0.15);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+    margin-top: 1.5rem;
+}
+.auth-button:hover {
+    background: #556eee;
+}
+.auth-button:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5) !important;
+    outline: 2px solid transparent !important;
+    outline-offset: 2px !important;
+}
+@media only screen and (min-width: 640px) {
+    .auth-button {
+        padding: 1.01rem 1.2rem;
+        margin-top: 2.25rem;
+    }
+}
+/* ======== END ::: AUTH BUTTON STYLE ======== */
+
+/* ======== START ::: CIRCLE STYLE ======== */
+/* circle yellow and blue  */
+.circle-yellow {
+    top: 50%;
+    left: 0;
+    transform: translate(-15%, -60%);
+}
+.circle-blue {
+    top: 50%;
+    right: 0;
+    transform: translate(20%, -20%);
+}
+/* ======== END ::: CIRCLE STYLE ======== */
+
+/* ======== START ::: UTILITY CLASS ======== */
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+.fs-15px {
+    font-size: 0.93rem;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.end-0 {
+    right: 0;
+}
+.top-50 {
+    top: 50%;
+}
+.translate-middle {
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 640px) {
+    .overflow-y-hidden {
+        overflow-y: scroll;
+    }
+
+    .overflow-x-hidden {
+        overflow-x: hidden;
+    }
+}
+/* ======== END ::: UTILITY CLASS ======== */

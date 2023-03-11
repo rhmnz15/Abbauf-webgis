@@ -1,0 +1,130 @@
+.searchbar-container {
+  position: absolute;
+  left: 65px;
+  z-index: 1;
+  top: 15px;
+
+  .input-box {
+    padding: 10px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+
+    .tab-icon-container {
+      overflow: hidden;
+      width: 20px;
+      transition: all 0.1s ease-out;
+    }
+
+    .tab-icon {
+      padding: 0px 7px;
+      border-radius: 2px;
+      border: 1px solid #c0c0c0;
+      font-size: 12px;
+      width: 20px;
+    }
+
+    .icon {
+      cursor: pointer;
+    }
+
+    input[type='text'] {
+      background-color: rgba(0, 0, 0, 0);
+      width: 0px;
+      transition: width 0.2s ease-out;
+      margin: 0 10px;
+
+      &:focus {
+        margin: 0;
+        width: 300px;
+        max-width: calc(100vw - 245px);
+      }
+    }
+
+    .loading-line {
+      position: absolute;
+      height: 2px;
+      display: none;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        left: -200px;
+        background-color: #014dea;
+        animation: loading-search 1s linear infinite;
+        -webkit-animation: loading-search 1s linear infinite;
+        opacity: 50%;
+      }
+
+      @keyframes loading-search {
+        from {
+          left: -200px;
+          width: 30%;
+        }
+        50% {
+          left: 50%;
+          width: 100%;
+        }
+        100% {
+          left: 100%;
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  .result-box {
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: white;
+    max-width: calc(100vw - 185px);
+    width: 360px;
+    padding: 5px 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    &[data-show='false'] {
+      display: none;
+    }
+
+    button {
+      width: 100%;
+      text-align: left;
+      background-color: white;
+    }
+
+    li {
+      padding: 10px 20px;
+
+      &:hover span.address {
+        color: #5e72e4;
+      }
+    }
+
+    h6.name {
+      margin: 0;
+    }
+
+    span.address {
+      font-size: 11px;
+      width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .icon {
+    width: 20px;
+  }
+}
